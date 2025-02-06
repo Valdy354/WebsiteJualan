@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #007bff;
+}
+
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 60px;
+}
+
+.overlay {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.article-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.article-section img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content {
+    width: 50%;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer .container {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .article-section {
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+    
+    .article-section.reverse {
+        flex-direction: column;
+    }
+    
+    .article-section img,
+    .content {
+        width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .menu {
+        display: none;
+    }
+}
